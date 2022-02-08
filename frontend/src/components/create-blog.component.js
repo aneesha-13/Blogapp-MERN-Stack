@@ -43,7 +43,7 @@ export default class CreateBlog extends Component {
     axios.post('http://localhost:4000/blogs/create-blog', blogObject)
       .then(res => console.log(res.data));
     this.setState({ authorid: '', author: '', title: '' ,content:''})
-    this.props.history.push('/blog-list')
+    this.props.history.push('/')
 
   }
   render() {
