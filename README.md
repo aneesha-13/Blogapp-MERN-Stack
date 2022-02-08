@@ -1,10 +1,10 @@
 # Blogapp-MERN-Stack
 
-Note:
-
+#### Note:
 "react-router-dom": "^5.3.0",
 
-DataBase:
-db:blogdb
+#### Database Details:
+db: blogdb
+
 collection: blog
 
