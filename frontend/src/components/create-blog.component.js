@@ -43,14 +43,18 @@ export default class CreateBlog extends Component {
     axios.post('http://localhost:4000/blogs/create-blog', blogObject)
       .then(res => console.log(res.data));
     this.setState({ authorid: '', author: '', title: '' ,content:''})
-    this.props.history.push('/')
+    this.props.history.push('/blog-list')
 
   }
   render() {
     return (
     <div className="form-wrapper">
+      <br/>
+      <h3>Create New Blog</h3>
+      <br/>
+
       <Form onSubmit={this.onSubmit}>
-        <Form.Group controlId="authorid">
+        <Form.Group className='mb3' controlId="authorid">
           <Form.Label>Authorid</Form.Label>
           <Form.Control type="text" value={this.state.authorid} onChange={this.onChangeauthorid} />
         </Form.Group>
@@ -64,7 +68,7 @@ export default class CreateBlog extends Component {
         </Form.Group>
         <Form.Group controlId="content">
           <Form.Label>Content</Form.Label>
-          <Form.Control type="text" value={this.state.content} onChange={this.onChangecontent} />
+          <Form.Control as="textarea" value={this.state.content} onChange={this.onChangecontent} />
         </Form.Group>
         <Button variant="danger" size="lg" block="block" type="submit" className="mt-4">
           Create Blog

@@ -83,7 +83,7 @@ export default class EditSBlog extends Component {
           </Form.Group>
           <Form.Group controlId="content">
             <Form.Label>Content</Form.Label>
-            <Form.Control type="text" value={this.state.content} onChange={this.onChangecontent} />
+            <Form.Control as="textarea" value={this.state.content} onChange={this.onChangecontent} />
           </Form.Group>
           <Button variant="danger" size="lg" block="block" type="submit" className="mt-4">
             UpdateBlog
