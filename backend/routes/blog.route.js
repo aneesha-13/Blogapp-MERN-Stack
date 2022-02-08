@@ -1,10 +1,10 @@
 let mongoose = require('mongoose'),
   express = require('express'),
   router = express.Router();
-// Student Model
+// Blog Model
 let blogSchema = require('../models/blog');
 
-// CREATE Student
+// CREATE Blog
 router.route('/create-blog').post((req, res, next) => {
   console.log('in create');
   blogSchema.create(req.body, (error, data) => {
@@ -18,7 +18,7 @@ router.route('/create-blog').post((req, res, next) => {
     }
   })
 });
-// READ Students
+// READ Blog
 router.route('/').get((req, res) => {
   blogSchema.find((error, data) => {
     if (error) {
@@ -28,7 +28,7 @@ router.route('/').get((req, res) => {
     }
   })
 })
-// Get Single Student
+// Get Single Blog
 router.route('/edit-blog/:id').get((req, res) => {
   blogSchema.findById(req.params.id, (error, data) => {
     if (error) {
@@ -39,7 +39,7 @@ router.route('/edit-blog/:id').get((req, res) => {
   })
 })
 
-// Update Student
+// Update Blog
 router.route('/update-blog/:id').put((req, res, next) => {
   blogSchema.findByIdAndUpdate(req.params.id, {
     $set: req.body
@@ -53,7 +53,7 @@ router.route('/update-blog/:id').put((req, res, next) => {
     }
   })
 })
-// Delete Student
+// Delete Blog
 router.route('/delete-blog/:id').delete((req, res, next) => {
   blogSchema.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
