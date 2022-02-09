@@ -62,7 +62,7 @@ export default class EditSBlog extends Component {
         console.log(error)
       })
     // Redirect to Student List 
-    this.props.history.push('/blog-list')
+    this.props.history.push('/')
   }
 
   render() {

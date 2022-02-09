@@ -28,6 +28,16 @@ router.route('/').get((req, res) => {
     }
   })
 })
+// READ Blog by id
+router.route('/:id').get((req, res) => {
+  blogSchema.findById(req.params.id, (error, data) => {
+    if (error) {
+      return next(error)
+    } else {
+      res.json(data)
+    }
+  })
+})
 // Get Single Blog
 router.route('/edit-blog/:id').get((req, res) => {
   blogSchema.findById(req.params.id, (error, data) => {

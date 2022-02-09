@@ -10,6 +10,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import CreateBlog from './components/create-blog.component'
 import EditBlog from './components/edit-blog.component'
 import BlogList from './components/blog-list.component'
+import ViewBlog from './components/view-blog.component'
+
 function App() {
   return (
     <div className="App">
@@ -56,6 +58,11 @@ function App() {
                     exact
                     path="/edit-blog/:id"
                     component={(props) => <EditBlog {...props} />}
+                  />
+                  <Route
+                    exact
+                    path="/view-blog/:id"
+                    component={(props) => <ViewBlog {...props} />}
                   />
                   {/* <Route
                     exact

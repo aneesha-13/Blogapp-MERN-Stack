@@ -34,9 +34,10 @@ export default class BlogList extends Component {
           <tr>
             <th>AuthorID</th>
             <th>Author</th>
-            <th>Title</th>
-            <th>Content</th>
-            <th>Action</th>
+            {/* <th>Title</th>
+            <th>Content</th> */}
+            <th>View Details</th>
+            {/* <th>Action</th> */}
           </tr>
         </thead>
         <tbody>
